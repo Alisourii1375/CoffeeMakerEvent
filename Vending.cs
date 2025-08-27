@@ -179,6 +179,11 @@ namespace CoffeeMaker
             }
         }
 
+        private static void CoffeeGrind()
+        {
+            CoffeeGrind();
+        }
+
         public void SendMessage(string  message, NotifyUse notify)
         {
             notify(message);
@@ -235,10 +240,37 @@ namespace CoffeeMaker
             Console.WriteLine("BrewCoffee");
         }
 
-        private Coffee CoffeeGrind()
+        public enum CoffeeSize
         {
-            return null;
-            Console.WriteLine("CoffeeGrind");
+            Small,
+            Medium,
+            Large
+        }
+      // mishe soeech am zd mn zdm khata dashtm ostad!!!!!!!!!!!!
+        public class CoffeeGrinder
+        {
+            public void CoffeGrind(CoffeeSize size)
+            {
+                if (size == CoffeeSize.Small)
+                {
+                    Console.WriteLine("smallasiab...");
+                    // کوچگ
+                }
+                else if (size == CoffeeSize.Medium)
+                {
+                    Console.WriteLine("meduomasiab...");
+                    // متوسط
+                }
+                else if (size == CoffeeSize.Large)
+                {
+                    Console.WriteLine("larjasiab...");
+                    // بزرگ
+                }
+                else
+                {
+                    Console.WriteLine("nsmoshakhas");
+                }
+            }
         }
 
         private Water BoilWater()
